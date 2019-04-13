@@ -15,6 +15,11 @@ module UnliftIO.Streams
   , writeTo
   , atEOF
 
+    -- * Utility streams
+
+  , nullInput
+  , nullOutput
+
     -- * Batteries included
   , module UnliftIO.Streams.ByteString
   , module UnliftIO.Streams.Combinators
@@ -64,3 +69,11 @@ writeTo as a = liftIO $ S.writeTo as a
 {-# INLINE atEOF #-}
 atEOF :: MonadUnliftIO m => InputStream a -> m Bool
 atEOF as = liftIO $ S.atEOF as
+
+{-# INLINE nullInput #-}
+nullInput :: MonadUnliftIO m => m (InputStream a)
+nullInput = liftIO $ S.nullInput
+
+{-# INLINE nullOutput #-}
+nullOutput :: MonadUnliftIO m => m (OutputStream a)
+nullOutput = liftIO $ S.nullOutput
