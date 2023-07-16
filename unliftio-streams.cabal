@@ -1,5 +1,5 @@
 Name:                unliftio-streams
-Version:             0.1.1.1
+Version:             0.2.0.0
 Synopsis:            Generalization of io-streams to MonadUnliftIO
 Description:         Generalization of io-streams to MonadUnliftIO.
 License:             Apache-2.0
